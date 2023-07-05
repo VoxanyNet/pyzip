@@ -11,6 +11,11 @@ import pathlib
 import tomlkit as toml
 import pipreqs
 
+DEFAULT_CONFIG = """
+package_directory = "."
+
+output_path = "./pyzip/archive.pyz"
+"""
 parser = argparse.ArgumentParser(
     prog = "pyzip",
     description = "Easily package python applications to .pyz archive",
@@ -27,11 +32,9 @@ if not os.path.exists("/tmp/pyzip"):
 
 # generate user config file
 if not os.path.exists(f"{pathlib.Path.home()}/.pyzip"):
-    with open("/etc/pyzip.conf", "r") as file:
-        default_config = file.read()
     
     with open(f"{pathlib.Path.home()}/.pyzip", "w") as file:
-        file.write(default_config) 
+        file.write(DEFAULT_CONFIG) 
 
 # generate local configuration file for this directory
 if args.gen_config:
