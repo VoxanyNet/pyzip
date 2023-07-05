@@ -1,2 +1,2 @@
-pipreqs==0.4.11
-tomlkit==0.11.6
+pipreqs==0.4.13
+tomlkit==0.11.8

@@ -1,0 +1,12 @@
+
+#directory that contains __main__.py file
+package_directory = "./src"
+
+# path for archive to be saved to
+output_path = "./pyzip/pyzip"
+
+# bundle requirements.txt packages into archive
+bundle_requirements = true
+
+# attempt to generate requirements.txt automatically
+generate_requirements = true
