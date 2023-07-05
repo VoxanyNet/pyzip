@@ -6,7 +6,7 @@ package_directory = "./src"
 output_path = "./pyzip/pyzip"
 
 # bundle requirements.txt packages into archive
-bundle_requirements = true
+bundle_requirements = false
 
 # attempt to generate requirements.txt automatically
-generate_requirements = true
+generate_requirements = false
